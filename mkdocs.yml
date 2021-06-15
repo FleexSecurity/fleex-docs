@@ -1,0 +1,31 @@
+site_name: Fleex
+site_url: https://example.com/
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep-purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep-purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+extra:
+  alternate:
+    # Switch to Italian
+    - name: Italiano
+      link:  https://example.com/it/
+      lang: it
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.superfences
+  - admonition
+
+copyright: Apache Licence &copy xm1k3 / sw33tLie
