@@ -13,7 +13,7 @@ Distributed computing tool
 | run     | Run a command                  |
 | scan    | Distributed scanning           |
 | spawn   | Spawn a fleet                  |
-| shh     | Start SSH session              |
+| ssh     | Start SSH session              |
 
 ### Usage
 
