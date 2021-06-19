@@ -2,19 +2,29 @@
 
 Distributed computing tool
 
-## Supported commands
+## Supported providers
+!!! example ""
+    - Linode
+    - Digitalocean
 
-| Command | Description                    |
-| ------- | ------------------------------ |
-| config  | fleex config setup             |
-| delete  | Delete a fleet or a single box |
-| images  | List available images          |
-| ls      | List running boxes             |
-| run     | Run a command                  |
-| scan    | Distributed scanning           |
-| spawn   | Spawn a fleet                  |
-| ssh     | Start SSH session              |
+## Available commands
 
+!!! example ""
+    ```
+    ./fleex -h
+
+    Available Commands:
+      build       Build image
+      config      fleex config setup
+      delete      Delete a fleet or a single box
+      help        Help about any command
+      images      List available images
+      ls          List running boxes
+      run         Run a command
+      scan        Distributed scanning
+      spawn       Spawn a fleet
+      ssh         Start SSH
+    ```
 ### Usage
 
 ```

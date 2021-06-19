@@ -1,18 +1,35 @@
 site_name: Fleex
 site_url: https://example.com/
 theme:
+  features:
+    - navigation.tabs
+    - navigation.expand
   name: material
   palette:
-    - scheme: default
-      primary: deep-purple
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      primary: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - scheme: slate
-      primary: deep-purple
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      primary: indigo
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
+nav:
+  - Getting started:
+    - index: index.md
+    - install: install.md
+  - Configuration:
+    - index: config/index.md
+    - Providers:
+      - linode: config/linode.md
+      - digitalocean: config/digitalocean.md
+  - Changelog:
+    - index: releases.md
 
 extra:
   alternate:
