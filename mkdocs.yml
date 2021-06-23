@@ -29,14 +29,7 @@ nav:
       - linode: config/linode.md
       - digitalocean: config/digitalocean.md
   - Changelog:
-    - index: releases.md
-
-extra:
-  alternate:
-    # Switch to Italian
-    - name: Italiano
-      link:  https://example.com/it/
-      lang: it
+    - Fleex: releases.md
 
 markdown_extensions:
   - pymdownx.highlight
