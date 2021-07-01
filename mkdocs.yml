@@ -18,6 +18,8 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
 
 nav:
   - Getting started:
@@ -39,5 +41,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - admonition
+  - attr_list
+
+repo_url: https://github.com/sw33tLie/fleex
+repo_name: Fleex
 
 copyright: Apache Licence &copy xm1k3 / sw33tLie
