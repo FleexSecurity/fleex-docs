@@ -30,6 +30,8 @@ nav:
       - digitalocean: config/digitalocean.md
   - Changelog:
     - Fleex: releases.md
+  - Credits:
+    - Contributors: credits.md
 
 markdown_extensions:
   - pymdownx.highlight
