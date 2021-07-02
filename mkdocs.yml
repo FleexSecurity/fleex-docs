@@ -23,16 +23,18 @@ theme:
 
 nav:
   - Getting started:
-    - index: index.md
-    - install: install.md
+    - index: getting_started/index.md
+    - Installation: getting_started/install.md
     - Providers:
-      - linode: faq/linode.md
-      - digitalocean: faq/digitalocean.md
+      - linode: getting_started/linode.md
+      - digitalocean: getting_started/digitalocean.md
+    - Configuration: getting_started/config.md
+    - Images: getting_started/images.md
+    - Boxes: getting_started/boxes.md
+    - Distributed commands: getting_started/commands.md
   - FAQ:
-    - Configuration: faq/index.md
-    - Images: faq/images.md
-    - Boxes: faq/boxes.md
-    - Distributed commands: faq/commands.md
+    - faq: faq/faq.md
+   
   - Changelog:
     - Fleex: releases.md
   - Credits:
