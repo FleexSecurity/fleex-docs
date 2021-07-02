@@ -11,9 +11,6 @@ This will fetch the configuration files from our GitHub release and put them in 
 
 The only file you need to worry about is `~/fleex/config.yaml`: open it with your favourite text editor, it will look like this:
 
-??? Info -
-    Default location: $HOME/fleex/config.yaml
-
 ### Default config.yaml
 
 ```yaml
