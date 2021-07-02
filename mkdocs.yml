@@ -23,15 +23,15 @@ theme:
 
 nav:
   - Getting started:
-    - index: getting_started/index.md
-    - Installation: getting_started/install.md
+    - index: index.md
+    - Installation: get-started/install.md
     - Providers:
-      - linode: getting_started/linode.md
-      - digitalocean: getting_started/digitalocean.md
-    - Configuration: getting_started/config.md
-    - Images: getting_started/images.md
-    - Boxes: getting_started/boxes.md
-    - Distributed commands: getting_started/commands.md
+      - linode: get-started/linode.md
+      - digitalocean: get-started/digitalocean.md
+    - Configuration: get-started/config.md
+    - Images: get-started/images.md
+    - Boxes: get-started/boxes.md
+    - Distributed commands: get-started/commands.md
   - FAQ:
     - faq: faq/faq.md
    
