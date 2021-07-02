@@ -12,7 +12,7 @@
     - **ap-west**: Mumbai, IN    
     - **ap-southeast**: Sydney, AU
     ??? Info -
-        More info on [Linode API](https://api.linode.com/v4/regions)
+        Read more here: [Linode API](https://api.linode.com/v4/regions)
 
 ### Types
 !!! note ""
@@ -27,4 +27,4 @@
     - ...
     - ...
     ??? Info -
-        More info on [Linode API](https://api.linode.com/v4/linode/types)
+        Read more here: [Linode API](https://api.linode.com/v4/linode/types)

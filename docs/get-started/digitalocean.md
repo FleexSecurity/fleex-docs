@@ -9,7 +9,7 @@
     - **TOR1**: Toronto, Canada  
     - **BLR1**: Bangalore, India
     ??? Info -
-        More info on [Digitalocean regional availability matrix ](https://docs.digitalocean.com/products/platform/availability-matrix/)
+        Read more here: [Digitalocean regional availability matrix ](https://docs.digitalocean.com/products/platform/availability-matrix/)
 
 ### Types
 !!! note ""
@@ -23,4 +23,4 @@
     - ...
     - ...
     ??? Info -
-        More info on [Digitalocean droplet plan](https://developers.digitalocean.com/documentation/changelog/api-v2/new-size-slugs-for-droplet-plan-changes/)
+        Read more here: [Digitalocean droplet plan](https://developers.digitalocean.com/documentation/changelog/api-v2/new-size-slugs-for-droplet-plan-changes/)
