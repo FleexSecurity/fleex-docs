@@ -1,6 +1,6 @@
 # Releases
 
-### Fleex v0.1
+### Fleex v1.0
 !!! example ""
     - Initial release
     - Added the possibility to generate custom images with the build command

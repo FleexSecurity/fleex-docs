@@ -25,11 +25,14 @@ nav:
   - Getting started:
     - index: index.md
     - install: install.md
-  - Configuration:
-    - index: config/index.md
     - Providers:
-      - linode: config/linode.md
-      - digitalocean: config/digitalocean.md
+      - linode: faq/linode.md
+      - digitalocean: faq/digitalocean.md
+  - FAQ:
+    - Configuration: faq/index.md
+    - Images: faq/images.md
+    - Boxes: faq/boxes.md
+    - Distributed commands: faq/commands.md
   - Changelog:
     - Fleex: releases.md
   - Credits:
