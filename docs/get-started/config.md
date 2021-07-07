@@ -21,7 +21,7 @@ linode:
   token: YOUR_LINODE_TOKEN
   region: eu-central
   size: g6-nanode-1
-  image: private/12345678 : put your image id here (./fleex images to get it)
+  image: private/12345678 # put your image id here (./fleex images to get it)
   port: 2266
   username: op
   password: USER_PASSWORD
