@@ -14,7 +14,7 @@
     ??? Info -
         Read more here: [Linode API](https://api.linode.com/v4/regions)
 
-### Types
+### Sizes
 !!! note ""
     - **g6-nanode-1**: Nanode 1GB - 5$/mo, 0.0075$/hr 
     - **g6-standard-1**: Linode 2GB - 10$/mo, 0.015$/hr 

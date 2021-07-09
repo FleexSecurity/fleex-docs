@@ -11,7 +11,7 @@
     ??? Info -
         Read more here: [Digitalocean regional availability matrix ](https://docs.digitalocean.com/products/platform/availability-matrix/)
 
-### Types
+### Sizes
 !!! note ""
     - **s-1vcpu-1gb**: Standard - 5$/mo
     - **s-1vcpu-2gb**: Standard - 10$/mo 
