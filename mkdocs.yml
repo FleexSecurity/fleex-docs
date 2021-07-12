@@ -29,10 +29,10 @@ nav:
     - Commands:
       - build: commands/build.md
       - config (Soon): commands/config.md
-      - delete (Soon): commands/delete.md
-      - images (Soon): commands/images.md
+      - delete: commands/delete.md
+      - images: commands/images.md
       - ls: commands/ls.md
-      - run (Soon): commands/run.md
+      - run: commands/run.md
       - scan: commands/scan.md
       - scp (Soon): commands/scp.md
       - spawn: commands/spawn.md

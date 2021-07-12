@@ -1,7 +1,27 @@
-# Main contributors
+## Main contributors
 
-
-|| | |
-|:-:|:-:|:-:|
-|<a href="https://github.com/sw33tLie"><img width="75px;" style="border-radius:50%;" src="https://avatars.githubusercontent.com/u/47645560?v=4"></a>|[Follow on Github](https://github.com/sw33tLie){ .md-button }|[Follow on Twitter](https://twitter.com/sw33tLie){ .md-button }|
-|<img  width="75px;" style="border-radius:50%;" src="https://avatars.githubusercontent.com/u/73166077?v=4?s=100">|[Follow on Github](https://github.com/xm1k3){ .md-button }|[Follow on Twitter](https://twitter.com/xm1k3_){ .md-button }|
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/sw33tLie">
+      <img
+          width="75px;"
+          src="https://avatars.githubusercontent.com/u/47645560?v=4"
+          alt="sw33tLie"/>
+        <br />
+        <b>sw33tLie</b>
+        </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/xm1k3"
+        ><img
+          width="75px;"
+          src="https://avatars.githubusercontent.com/u/73166077?v=4?s=100"
+          alt="xm1k3"
+        />
+        <br />
+        <b>xm1k3</b>
+        </a>
+    </td>
+  </tr>
+</table>

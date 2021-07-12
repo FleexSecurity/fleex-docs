@@ -1,3 +1,5 @@
+# Fleex
+
 ## Welcome to Fleex Docs
 
 Fleex allows you to spawn multiple VPS on various cloud providers and later use them to run distributed commands.
