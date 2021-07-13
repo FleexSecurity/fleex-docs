@@ -1,29 +1,35 @@
 site_name: Fleex
-site_url: https://example.com/
+site_url: https://github.com/sw33tLie/fleex-docs
 theme:
+  logo: img/fleex_white.png
+  favicon: img/fleex_white.png
   features:
     - navigation.tabs
     - navigation.expand
   name: material
+  # custom_dir: material
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: slate
-      primary: indigo
+      primary: deep-purple
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: default
-      primary: indigo
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
+  
+extra_css:
+  - stylesheets/extra.css
 
 nav:
+  # - Home: index.md
   - Getting started:
-    - index: index.md
+    - introduction: get-started/index.md
     - Installation: get-started/install.md
     - Configuration: get-started/config.md
     - Commands:
