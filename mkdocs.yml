@@ -27,9 +27,8 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  # - Home: index.md
   - Getting started:
-    - introduction: get-started/index.md
+    - introduction: index.md
     - Installation: get-started/install.md
     - Configuration: get-started/config.md
     - Commands:
