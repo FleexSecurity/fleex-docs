@@ -25,3 +25,20 @@
     </td>
   </tr>
 </table>
+
+
+## Sponsors
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/projectdiscovery">
+      <img
+          width="75px;"
+          src="https://avatars.githubusercontent.com/u/50994705?v=4"
+          alt="projectdiscovery"/>
+        <br />
+        <b>ProjectDiscovery</b>
+        </a>
+    </td>
+  </tr>
+</table>
