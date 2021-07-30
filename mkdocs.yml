@@ -53,7 +53,7 @@ nav:
    
   - Changelog:
     - Fleex: releases.md
-  - Credits / Sponsors:
+  - Credits:
     - Contributors: credits.md
 
 markdown_extensions:
