@@ -1,5 +1,5 @@
 site_name: Fleex
-site_url: https://github.com/sw33tLie/fleex-docs
+site_url: https://fleexsecurity.github.io/fleex-docs/
 theme:
   logo: img/fleex_white.png
   favicon: img/fleex_white.png
@@ -65,7 +65,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.tabbed
 
-repo_url: https://github.com/sw33tLie/fleex
+repo_url: https://github.com/FleexSecurity/fleex
 repo_name: Fleex
 
-copyright: Apache Licence &copy xm1k3 / sw33tLie
+copyright: Apache Licence &copy FleexSecurity
