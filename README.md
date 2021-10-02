@@ -1,5 +1,3 @@
-# fleex-docs
-
 <a href="https://fleexsecurity.github.io/fleex-docs/"><img src="docs/img/Fleex-docs.png" alt="Fleex-docs"></a>
 
 ## Welcome to Fleex
