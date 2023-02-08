@@ -20,19 +20,5 @@ Note that in the future we will add more of them, but for now you should be good
 
 
 ## Available commands
-```
-./fleex -h
 
-Available Commands:
-  build       Build image
-  config      fleex config setup
-  delete      Delete a fleet or a single box
-  help        Help about any command
-  images      List available images
-  ls          List running boxes
-  run         Run a command
-  scan        Distributed scanning
-  scp         SCP client
-  spawn       Spawn a fleet
-  ssh         Start SSH
-```
+![Fleex help](gif/fleex_intro.gif){ align=center }
