@@ -24,7 +24,7 @@ fleex images ls
 ```
 Or
 ```
-fleex images -p PROVIDER-NAME
+fleex images ls -p PROVIDER-NAME
 ```
 
 Result:
