@@ -52,7 +52,7 @@ fleex scan --module module.yaml
 # module.yaml
 
 name: ffuf-module-test
-author: xm1k3
+author: FleexSecurity
 description: ffuf module test
 
 vars:
