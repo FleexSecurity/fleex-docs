@@ -48,8 +48,8 @@ nav:
     # - Images: get-started/images.md
     # - Boxes: get-started/boxes.md
     # - Distributed commands: get-started/commands.md
-  - FAQ:
-    - faq: faq/faq.md
+  # - FAQ:
+  #   - faq: faq/faq.md
    
   - Changelog:
     - Fleex: releases.md
