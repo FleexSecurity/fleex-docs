@@ -32,7 +32,7 @@ nav:
     - Installation: get-started/install.md
     - Configuration: get-started/config.md
     - Commands:
-      - build: commands/build.md
+      # - build: commands/build.md
       - config: commands/config.md
       - delete: commands/delete.md
       - images: commands/images.md
@@ -44,7 +44,7 @@ nav:
       - ssh: commands/ssh.md
     - Providers:
       - linode: get-started/linode.md
-      - digitalocean: get-started/digitalocean.md
+      # - digitalocean: get-started/digitalocean.md
     # - Images: get-started/images.md
     # - Boxes: get-started/boxes.md
     # - Distributed commands: get-started/commands.md
@@ -53,8 +53,8 @@ nav:
    
   - Changelog:
     - Fleex: releases.md
-  - Credits / Sponsors:
-    - Contributors: credits.md
+  # - Credits / Sponsors:
+  #   - Contributors: credits.md
 
 markdown_extensions:
   - pymdownx.highlight
