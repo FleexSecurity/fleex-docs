@@ -17,7 +17,7 @@ Flags:
   -U, --username string   SSH username
 
 Global Flags:
-      --config string     config file (default is $HOME/fleex/config.yaml)
+      --config string     config file
   -l, --loglevel string   Set log level. Available: debug, info, warn, error, fatal (default "info")
       --proxy string      HTTP Proxy (Useful for debugging. Example: http://127.0.0.1:8080)
 ```
