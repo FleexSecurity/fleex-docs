@@ -2,17 +2,29 @@ This command allows you to see all the images you have generated from a provider
 
 Usage:
 
-| Flag | Name         | Description                                        | Default |
-| ---- | ------------ | -------------------------------------------------- | ------- |
-| `-p` | `--provider` | Service provider (Supported: linode, digitalocean) |         |
+```
+List available images
+
+Usage:
+  fleex images ls [flags]
+
+Flags:
+  -h, --help              help for ls
+  -p, --provider string   Service provider
+
+Global Flags:
+      --config string     config file
+  -l, --loglevel string   Set log level. Available: debug, info, warn, error, fatal (default "info")
+      --proxy string      HTTP Proxy (Useful for debugging. Example: http://127.0.0.1:8080)
+```
 
 Examples:
 ```
-fleex images
+fleex images ls
 ```
 Or
 ```
-fleex images -p PROVIDER-NAME
+fleex images ls -p PROVIDER-NAME
 ```
 
 Result:

@@ -1,23 +1,31 @@
-This command allows you to generate custom VPS dynamically on a specific provider.
+The fleex spawn command empowers you to dynamically create custom virtual private servers (VPS) on a specific provider. 
 
+Ensure you have your configuration data set up in `$HOME/.config/fleex/config.json`. You also have the option to override this data using the available flags.
 
-!!! note
-    The data is taken from $HOME/fleex/config.yaml,
-    
-    you can also overwrite it via the flags
 
 Usage:
 
-| Flag | Name         | Description                                        | Default |
-| ---- | ------------ | -------------------------------------------------- | ------- |
-| `-c` | `--count`    | How many box to spawn                              | 2       |
-| `-I` | `--image`    | Image                                              |         |
-| `-n` | `--name`     | Fleet name. Boxes will be named [name]-[number]    | pwn     |
-| `-p` | `--provider` | Service provider (Supported: linode, digitalocean) |         |
-| `-R` | `--region`   | Region                                             |         |
-| `-S` | `--size`     | Size                                               |         |
-|      | `--skipwait` | Skip waiting until all boxes are running           | false   |
+```
+Spawn a fleet or even a single box
 
+Usage:
+  fleex spawn [flags]
+
+Flags:
+  -c, --count int         How many box to spawn (default 2)
+  -h, --help              help for spawn
+  -I, --image string      Image
+  -n, --name string       Fleet name. Boxes will be named [name]-[number] (default "pwn")
+  -p, --provider string   Service provider
+  -R, --region string     Region
+  -S, --size string       Size
+      --skipwait          Skip waiting until all boxes are running
+
+Global Flags:
+      --config string     config file
+  -l, --loglevel string   Set log level. Available: debug, info, warn, error, fatal (default "info")
+      --proxy string      HTTP Proxy (Useful for debugging. Example: http://127.0.0.1:8080
+```
 
 To spawn a new fleet (aka, many boxes with starting with fleetname-box_id) run:
 ```

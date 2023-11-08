@@ -2,9 +2,21 @@ This command allows you to see all the VPS you have generated from a provider
 
 Usage:
 
-| Flag | Name         | Description                                        | Default |
-| ---- | ------------ | -------------------------------------------------- | ------- |
-| `-p` | `--provider` | Service provider (Supported: linode, digitalocean) |         |
+```
+List running boxes
+
+Usage:
+  fleex ls [flags]
+
+Flags:
+  -h, --help              help for ls
+  -p, --provider string   Service provider (Supported: linode)
+
+Global Flags:
+      --config string     config file
+  -l, --loglevel string   Set log level. Available: debug, info, warn, error, fatal (default "info")
+      --proxy string      HTTP Proxy (Useful for debugging. Example: http://127.0.0.1:8080)
+```
 
 Examples:
 ```
