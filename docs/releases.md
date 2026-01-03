@@ -1,5 +1,75 @@
 # Releases
 
+### Fleex v3.0.0
+
+**Major Release - New Features**
+
+#### New Commands
+
+* **`build`** - Provision fleet instances with tools using YAML recipes
+  - `build list` - List available build recipes
+  - `build show` - Show recipe details
+  - `build run` - Run build on a fleet
+  - `build verify` - Verify installation
+  - `build create` - Create new recipes
+  - Supports `--snapshot` flag to create images after build
+
+* **`estimate`** - Cost estimation before running scans
+  - Calculates estimated duration and cost
+  - Supports multiple tools (nuclei, httpx, masscan, etc.)
+  - Shows cost level indicator (LOW, MODERATE, HIGH)
+
+* **`status`** - Detailed fleet status with grouping
+  - Groups instances by fleet
+  - Shows running/total counts
+  - Estimated hourly cost display
+  - Summary statistics
+
+#### Enhanced Commands
+
+* **`init`** - Interactive setup wizard
+  - `--wizard` flag for guided setup
+  - Use case selection (Bug Bounty, Pentesting, Research)
+  - Multi-provider configuration
+  - `--add-provider` to add providers to existing config
+  - Auto-generates SSH keys
+  - Creates default workflows and build recipes
+
+* **`spawn`** - Build integration
+  - `--build` flag to provision after spawn
+  - `--no-verify` to skip verification
+
+* **`scan`** - Workflow support
+  - `--workflow` flag for multi-step pipelines
+  - `scan list` - List available workflows
+  - `scan show` - Show workflow details
+  - `--dry-run` to preview execution
+  - `--verbose` for detailed output
+
+#### New Systems
+
+* **Build Recipes** - YAML-based provisioning scripts
+  - Default recipes: `security-tools`, `recon-tools`, `base-setup`
+  - Variable substitution with `{vars.KEY}`
+  - Step retries and timeouts
+  - Verification checks
+  - Stored in `~/.config/fleex/builds/`
+
+* **Workflows** - Multi-step scan pipelines
+  - Default workflows: `quick-scan`, `full-recon`, `subdomain-enum`, `port-scan`, `meg-scan`, `ffuf-fuzz`
+  - Setup commands
+  - Output aggregation options
+  - Stored in `~/.config/fleex/workflows/`
+
+#### Provider Support
+
+* Linode (fully supported)
+* DigitalOcean (fully supported)
+* Vultr (fully supported)
+* Custom VMs (manual configuration)
+
+---
+
 ### Fleex v2.1.0
 
 **What's Changed**
