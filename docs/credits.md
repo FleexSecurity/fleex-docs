@@ -1,30 +1,18 @@
-## Main contributors
+# Credits
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/sw33tLie">
-      <img
-          width="75px;"
-          src="https://avatars.githubusercontent.com/u/47645560?v=4"
-          alt="sw33tLie"/>
-        <br />
-        <b>sw33tLie</b>
-        </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/xm1k3"
-        ><img
-          width="75px;"
-          src="https://avatars.githubusercontent.com/u/73166077?v=4?s=100"
-          alt="xm1k3"
-        />
-        <br />
-        <b>xm1k3</b>
-        </a>
-    </td>
-  </tr>
-</table>
+## Contributors
+
+Thanks to all the people who have contributed to Fleex!
+
+<a href="https://github.com/FleexSecurity/fleex/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FleexSecurity/fleex" />
+</a>
+
+<br /><br />
+
+<a href="https://github.com/FleexSecurity/fleex/graphs/contributors">
+  View all contributors on GitHub →
+</a>
 
 
 ## Sponsors
@@ -52,3 +40,10 @@
     </td>
   </tr>
 </table>
+
+## Contributing
+
+Want to contribute? Check out our [GitHub repository](https://github.com/FleexSecurity/fleex)!
+
+- Report bugs and request features via [Issues](https://github.com/FleexSecurity/fleex/issues)
+- Submit improvements via [Pull Requests](https://github.com/FleexSecurity/fleex/pulls)
