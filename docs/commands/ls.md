@@ -1,39 +1,122 @@
-This command allows you to see all the VPS you have generated from a provider 
+# ls
 
-Usage:
+List all running instances on your cloud provider.
+
+## Usage
 
 ```
-List running boxes
-
-Usage:
-  fleex ls [flags]
-
-Flags:
-  -h, --help              help for ls
-  -p, --provider string   Service provider (Supported: linode)
-
-Global Flags:
-      --config string     config file
-  -l, --loglevel string   Set log level. Available: debug, info, warn, error, fatal (default "info")
-      --proxy string      HTTP Proxy (Useful for debugging. Example: http://127.0.0.1:8080)
+fleex ls [flags]
 ```
 
-Examples:
-```
+## Flags
+
+| Flag | Short | Description | Default |
+|------|-------|-------------|---------|
+| `--provider` | `-p` | Cloud provider | config default |
+
+## Basic Usage
+
+List all instances:
+
+```bash
 fleex ls
 ```
-Or
+
+Output:
+
 ```
-fleex ls -p PROVIDER-NAME
+ID         NAME       STATUS   IP
+123456789  pwn-1      running  192.168.1.1
+123456790  pwn-2      running  192.168.1.2
+123456791  scan-1     running  192.168.2.1
+123456792  scan-2     running  192.168.2.2
+123456793  scan-3     running  192.168.2.3
 ```
 
-Result:
-```
-<ID>      <NAME> <STATUS> <IP>
-123456789 pwn-1  active   192.168.1.1
-123456789 pwn-2  active   192.168.1.2
-123456789 pwn-4  active   192.168.1.3
+## List by Provider
+
+List instances on a specific provider:
+
+```bash
+fleex ls -p digitalocean
 ```
 
-!!! warning
-    The displayed data is for example only
+## Output Columns
+
+| Column | Description |
+|--------|-------------|
+| ID | Provider's instance ID |
+| NAME | Instance label/name |
+| STATUS | Current state (running, provisioning, etc.) |
+| IP | Public IP address |
+
+## Instance States
+
+| Status | Description |
+|--------|-------------|
+| `running` / `active` | Instance is ready |
+| `provisioning` | Being created |
+| `booting` | Starting up |
+| `shutting_down` | Being stopped |
+| `offline` | Stopped |
+
+## Examples
+
+### Quick Check
+
+Verify fleet is running before scan:
+
+```bash
+fleex ls
+```
+
+### Count Instances
+
+Count running instances:
+
+```bash
+fleex ls | wc -l
+```
+
+### Filter by Fleet
+
+Use grep to filter:
+
+```bash
+fleex ls | grep scan
+```
+
+### Get IPs
+
+Extract just IP addresses:
+
+```bash
+fleex ls | awk '{print $4}'
+```
+
+## Comparison: ls vs status
+
+| Feature | `fleex ls` | `fleex status` |
+|---------|------------|----------------|
+| Output format | Simple table | Grouped by fleet |
+| Fleet grouping | No | Yes |
+| Cost estimate | No | Yes |
+| Summary stats | No | Yes |
+
+Use `ls` for:
+
+- Quick overview of all instances
+- Scripting and automation
+- Simple instance lookup
+
+Use `status` for:
+
+- Detailed fleet information
+- Cost monitoring
+- Fleet health checks
+
+## Notes
+
+- Shows all instances, not filtered by fleet
+- Use `fleex status {fleet}` for fleet-specific view
+- Empty output means no instances are running

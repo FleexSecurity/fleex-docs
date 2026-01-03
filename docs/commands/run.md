@@ -1,75 +1,165 @@
-The fleex run command empowers you to send commands to a fleet of spawned machines, enabling seamless remote execution of tasks. However, please ensure that you have previously generated VPS using [`fleex spawn`](spawn.md) before utilizing this command.
+# run
 
-Usage:
+Execute a command simultaneously across all instances in a fleet.
+
+## Usage
 
 ```
-Send a command to a fleet
-
-Usage:
-  fleex run [flags]
-
-Flags:
-  -c, --command string    Command to send
-  -h, --help              help for run
-  -n, --name string       Fleet name (default "pwn")
-  -p, --port int          SSH port (default -1)
-  -P, --provider string   Service provider
-  -U, --username string   SSH username
-
-Global Flags:
-      --config string     config file
-  -l, --loglevel string   Set log level. Available: debug, info, warn, error, fatal (default "info")
-      --proxy string      HTTP Proxy (Useful for debugging. Example: http://127.0.0.1:8080)
+fleex run [flags]
 ```
 
-!!! warning
-    for this example 2 vps were used
+## Flags
 
-Examples:
+| Flag | Short | Description | Default |
+|------|-------|-------------|---------|
+| `--name` | `-n` | Fleet name | `pwn` |
+| `--command` | `-c` | Command to execute (required) | |
+| `--provider` | `-P` | Cloud provider | config default |
+| `--username` | `-U` | SSH username | config default |
+| `--port` | `-p` | SSH port | config default |
 
-Remote ls -la
-```
-fleex run -c "ls -la"
-```
-Or
-```
-fleex run -c "ls -la" --port 22 -U root
-```
-Result:
-```
-total 28
-drwx------  5 root root 4096 Jul 12 19:13 .
-drwxr-xr-x 19 root root 4096 Jul 12 19:11 ..
--rw-r--r--  1 root root 3106 Dec  5  2019 .bashrc
-drwx------  2 root root 4096 Jul 12 19:13 .cache
--rw-r--r--  1 root root    0 Jul 12 19:11 .cloud-locale-test.skip
--rw-r--r--  1 root root  161 Dec  5  2019 .profile
-drwx------  2 root root 4096 Jul 12 19:11 .ssh
-drwxr-xr-x  3 root root 4096 Jul 12 19:11 snap
-total 28
-drwx------  5 root root 4096 Jul 12 19:13 .
-drwxr-xr-x 19 root root 4096 Jul 12 19:12 ..
--rw-r--r--  1 root root 3106 Dec  5  2019 .bashrc
-drwx------  2 root root 4096 Jul 12 19:13 .cache
--rw-r--r--  1 root root    0 Jul 12 19:12 .cloud-locale-test.skip
--rw-r--r--  1 root root  161 Dec  5  2019 .profile
-drwx------  2 root root 4096 Jul 12 19:12 .ssh
-drwxr-xr-x  3 root root 4096 Jul 12 19:12 snap
+## Basic Usage
+
+Execute a command on all instances in a fleet:
+
+```bash
+fleex run -n myfleet -c "whoami"
 ```
 
----
-
-Remote whoami
-```
-fleex run -c "whoami"
-```
-Or
-```
-fleex run -c "whoami" --port 22 -U root
-```
-Result:
+Output (for a 3-instance fleet):
 
 ```
 root
 root
+root
 ```
+
+## Examples
+
+### System Information
+
+Check disk usage on all instances:
+
+```bash
+fleex run -n myfleet -c "df -h /"
+```
+
+### Update Packages
+
+Update apt packages on all instances:
+
+```bash
+fleex run -n myfleet -c "apt-get update && apt-get upgrade -y"
+```
+
+### Install Tool
+
+Install a tool on all instances:
+
+```bash
+fleex run -n myfleet -c "go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest"
+```
+
+### Check Running Processes
+
+List running processes:
+
+```bash
+fleex run -n myfleet -c "ps aux | grep nuclei"
+```
+
+### Download File
+
+Download a file to all instances:
+
+```bash
+fleex run -n myfleet -c "wget -O /tmp/resolvers.txt https://raw.githubusercontent.com/janmasarik/resolvers/master/resolvers.txt"
+```
+
+### Check Tool Versions
+
+Verify tool installation:
+
+```bash
+fleex run -n myfleet -c "nuclei --version"
+```
+
+### Custom SSH Settings
+
+Use custom SSH username and port:
+
+```bash
+fleex run -n myfleet -c "ls -la" -U ubuntu -p 2222
+```
+
+### Multiple Commands
+
+Chain multiple commands:
+
+```bash
+fleex run -n myfleet -c "cd /tmp && ls -la && pwd"
+```
+
+## Use Cases
+
+### Pre-Scan Setup
+
+Prepare instances before running scans:
+
+```bash
+fleex run -n myfleet -c "nuclei -update-templates"
+```
+
+### Post-Scan Cleanup
+
+Clean up temporary files:
+
+```bash
+fleex run -n myfleet -c "rm -rf /tmp/fleex-*"
+```
+
+### Monitor Resource Usage
+
+Check memory and CPU:
+
+```bash
+fleex run -n myfleet -c "free -h && uptime"
+```
+
+### Verify Connectivity
+
+Test network connectivity:
+
+```bash
+fleex run -n myfleet -c "curl -s https://api.ipify.org"
+```
+
+## Comparison: run vs scan
+
+| Feature | `fleex run` | `fleex scan` |
+|---------|-------------|--------------|
+| Input splitting | No | Yes |
+| Output aggregation | No | Yes |
+| File transfer | No | Yes |
+| Same command on all | Yes | Yes |
+| Different data per instance | No | Yes |
+
+Use `run` for:
+
+- Quick commands across all instances
+- System administration tasks
+- Tool installation/updates
+- Checking instance status
+
+Use `scan` for:
+
+- Distributed scanning with input splitting
+- When you need aggregated output
+- Multi-step workflows
+
+## Notes
+
+- Commands execute in parallel on all instances
+- Output is displayed as it arrives from each instance
+- Use `fleex ssh` to connect to a single instance interactively
+- Requires instances to be running (check with `fleex status`)

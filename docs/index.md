@@ -2,27 +2,90 @@
 
 ## Welcome to Fleex
 
-Welcome to Fleex - Empowering Distributed Computing!
+Fleex is a distributed computing tool designed for penetration testing and bug bounty hunting. It enables you to execute commands across multiple virtual private servers (VPS) with ease and efficiency.
 
-Fleex is a cutting-edge tool designed to revolutionize distributed computing. Originally crafted for the dynamic realms of penetration testing and bug bounty hunting, Fleex now offers a versatile platform for executing a wide range of commands across multiple virtual private servers (VPS) with unparalleled ease and efficiency.
+### Key Features
 
-Key Features:
+- **Multi-Cloud Support**: Seamlessly work with Linode, DigitalOcean, Vultr, and custom VMs
+- **Build System**: Provision fleets with pre-configured tools using YAML recipes
+- **Workflow Pipelines**: Execute multi-step scan workflows across distributed instances
+- **Cost Estimation**: Calculate scan costs before running
+- **Automatic Scaling**: Split input files and aggregate results automatically
 
-- **Multi-Cloud Integration**: Seamlessly interact with various cloud providers to create, manage, and remove VPS instances effortlessly.
+### Quick Start
 
-- **YAML-Powered Scans**: Conduct lightning-fast internet scans utilizing modules specified in YAML configurations with the powerful scan command.
+```bash
+# Install
+go install github.com/FleexSecurity/fleex@latest
 
-- **Concurrent Command Execution**: Execute individual commands simultaneously across numerous VPS units using the potent run command.
+# Initialize
+fleex init --wizard
 
-- **Instantaneous SSH Access**: Effortlessly connect to a specific machine with automatic SSH functionality by simply providing its designated name.
+# Spawn fleet with tools
+fleex spawn -n scan -c 10 --build security-tools
 
-Discover new possibilities in distributed computing with Fleex. Whether you're a seasoned security researcher or a budding bug bounty hunter, Fleex empowers you to achieve unprecedented results with speed and precision.
+# Run distributed scan
+fleex scan -n scan --workflow quick-scan -i targets.txt -o results.txt
 
-## Supported providers
+# Clean up
+fleex delete -n scan
+```
 
-We currently support the following providers:
-!!! example ""
-    - Linode
+### Commands Overview
 
+| Command | Description |
+|---------|-------------|
+| `init` | Initialize configuration with wizard |
+| `spawn` | Create VPS instances |
+| `build` | Provision instances with tools |
+| `scan` | Distributed scanning with workflows |
+| `run` | Execute commands on fleet |
+| `status` | Fleet status and cost tracking |
+| `estimate` | Cost estimation |
+| `delete` | Remove instances |
+| `ls` | List instances |
+| `ssh` | Connect to instance |
+| `scp` | Transfer files |
+| `images` | Manage snapshots |
 
-Stay tuned for future updates as we expand our list of supported cloud providers to further enhance your Fleex experience. For now, dive into the world of distributed computing with the reliability of Linode and more to come!
+### Supported Providers
+
+| Provider | Status |
+|----------|--------|
+| Linode | Fully supported |
+| DigitalOcean | Fully supported |
+| Vultr | Fully supported |
+| Custom VMs | Manual configuration |
+
+### Example Workflows
+
+**Vulnerability Scanning**
+
+```bash
+fleex spawn -n nuclei -c 20 --build security-tools
+fleex scan -n nuclei --workflow quick-scan -i urls.txt -o vulnerabilities.txt
+fleex delete -n nuclei
+```
+
+**Subdomain Enumeration**
+
+```bash
+fleex spawn -n recon -c 10 --build recon-tools
+fleex scan -n recon --workflow subdomain-enum -i domains.txt -o subdomains.txt
+fleex delete -n recon
+```
+
+**Port Scanning**
+
+```bash
+fleex spawn -n portscan -c 50
+fleex scan -n portscan --workflow port-scan -i ips.txt -o ports.txt
+fleex delete -n portscan
+```
+
+### Documentation
+
+- [Installation](get-started/install.md)
+- [Configuration](get-started/config.md)
+- [Commands Reference](commands/init.md)
+- [Changelog](releases.md)
