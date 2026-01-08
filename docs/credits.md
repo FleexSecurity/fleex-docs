@@ -19,10 +19,20 @@ Thanks to all the people who have contributed to Fleex!
 <table>
   <tr>
     <td align="center">
+      <a href="https://github.com/cmgnexa">
+      <img
+          width="75px;"
+          src="https://avatars.githubusercontent.com/u/199640673"
+          alt="cmgnexa"/>
+        <br />
+        <b>CMG NEXA</b>
+        </a>
+    </td>
+    <td align="center">
       <a href="https://github.com/projectdiscovery">
       <img
           width="75px;"
-          src="https://avatars.githubusercontent.com/u/50994705?v=4"
+          src="https://avatars.githubusercontent.com/u/50994705"
           alt="projectdiscovery"/>
         <br />
         <b>ProjectDiscovery</b>
